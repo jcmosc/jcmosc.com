@@ -1,5 +1,5 @@
 import { useEffect, useSyncExternalStore } from 'react'
-import { Highlighter, getHighlighter, createCssVariablesTheme } from 'shiki'
+import { Highlighter } from 'shiki'
 
 export const languages = [
   'bash',
@@ -63,7 +63,8 @@ let sharedHighlighter: Highlighter
 let sharedHighlighterListeners = new Set<() => void>()
 
 async function loadHighlighter() {
-  sharedHighlighter = await getHighlighter({
+  const { getSingletonHighlighter } = await import('shiki')
+  sharedHighlighter = await getSingletonHighlighter({
     langs: languages,
     themes: ['catppuccin-latte']
   })
