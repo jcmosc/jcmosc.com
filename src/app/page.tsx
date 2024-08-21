@@ -18,7 +18,7 @@ export default async function Home() {
             </Heading>
           </SectionHeader>
           <div className="text-xl leading-relaxed space-y-4">
-            <p>I'm currently building full-stack applications in the Next.js ecosystem.</p>
+            <p>I&apos;m currently building full-stack applications in the Next.js ecosystem.</p>
           </div>
         </Container>
       </Section>
