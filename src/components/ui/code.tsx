@@ -22,7 +22,10 @@ export function HighlightedCode({
   if (highlighter) {
     const html = highlighter.codeToHtml(children, {
       lang: language,
-      theme: 'catppuccin-latte',
+      themes: {
+        light: 'catppuccin-latte',
+        dark: 'catppuccin-mocha'
+      },
       defaultColor: false,
       transformers: [
         {

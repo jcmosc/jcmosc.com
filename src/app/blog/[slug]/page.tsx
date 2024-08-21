@@ -44,7 +44,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
               Published on <Time date={post.attributes.date} />
             </span>
           </aside>
-          <article className="prose md:prose-lg prose-stone">
+          <article className="prose md:prose-lg prose-stone dark:prose-invert">
             <Markdown>{post.content}</Markdown>
           </article>
         </Container>

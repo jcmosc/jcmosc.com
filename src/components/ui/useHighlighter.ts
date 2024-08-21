@@ -66,7 +66,7 @@ async function loadHighlighter() {
   const { getSingletonHighlighter } = await import('shiki')
   sharedHighlighter = await getSingletonHighlighter({
     langs: languages,
-    themes: ['catppuccin-latte']
+    themes: ['catppuccin-latte', 'catppuccin-mocha']
   })
   sharedHighlighterListeners.forEach((listener) => listener())
 }

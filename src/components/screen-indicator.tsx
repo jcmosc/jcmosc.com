@@ -3,7 +3,7 @@ export function ScreenIndicator() {
     return null
   }
   return (
-    <div className="absolute bottom-2 right-2 rounded-full bg-black size-6 text-white justify-center items-center flex text-xs">
+    <div className="absolute bottom-2 right-2 rounded-full bg-stone-950 size-6 text-white dark:bg-white dark:text-stone-950 justify-center items-center flex text-xs">
       <span className="hidden max-sm:inline">∅</span>
       <span className="hidden sm:max-md:inline">sm</span>
       <span className="hidden md:max-lg:inline">md</span>

@@ -8,10 +8,10 @@ export function PostList({ posts }: { posts: Pick<Post, 'attributes'>[] }) {
         <li key={post.attributes.slug}>
           <a
             href={'/blog/' + post.attributes.slug}
-            className="block group hover:bg-stone-100 -mx-2 md:-mx-4 px-2 md:px-4 py-4 rounded-lg"
+            className="block group hover:bg-stone-100 -mx-2 md:-mx-4 px-2 md:px-4 py-4 rounded-lg dark:hover:bg-white/5"
           >
             <div className="flex flex-col gap-1">
-              <div className="text-lg md:text-xl font-medium text-blue-600 hover:text-blue-500">
+              <div className="text-lg md:text-xl font-medium text-blue-600 group-hover:text-blue-700 dark:text-blue-500 dark:group-hover:text-blue-400">
                 {post.attributes.title}
               </div>
               <dl className="text-xs md:text-sm text-stone-500">
