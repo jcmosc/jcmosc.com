@@ -21,7 +21,7 @@ export default function Header({ className, ...props }: ComponentProps<'header'>
         )}
         {!isPost && <div />}
         <nav>
-          <ul className="flex gap-4">
+          <ul className="flex gap-8">
             <li>
               <Link href="/" className="hover:text-stone-950 hover:underline">
                 Home

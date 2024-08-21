@@ -19,5 +19,5 @@ export function Subheading({ className, ...props }: ComponentProps<'h2'>) {
 }
 
 export function TextLink({ className, ...props }: ComponentProps<typeof Link>) {
-  return <Link className={clsx('underline hover:text-blue-500', className)} {...props} />
+  return <Link className={clsx('font-medium underline text-blue-600 hover:text-blue-500', className)} {...props} />
 }

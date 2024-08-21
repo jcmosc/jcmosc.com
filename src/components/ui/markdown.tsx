@@ -2,7 +2,7 @@ import type { Element } from 'hast'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { CodeListing } from './code'
-import { Heading, Subheading } from './type'
+import { Heading, Subheading, TextLink } from './type'
 import { Language } from './useHighlighter'
 
 function textContent(node: Element): string {
@@ -18,6 +18,7 @@ export function Markdown({ children }: { children?: string | null | undefined })
       components={{
         h1: ({ node, ...rest }) => <Heading {...rest} />,
         h2: ({ node, ...rest }) => <Subheading {...rest} />,
+        a: ({ node, href, ...rest }) => <TextLink href={href ?? '#'} {...rest} />,
         pre: ({ node, ...rest }) => {
           let language: Language | undefined
           if (
