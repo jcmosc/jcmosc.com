@@ -17,7 +17,7 @@ export function Heading({ className, ...props }: ComponentProps<'h1'>) {
 export function Subheading({ className, ...props }: ComponentProps<'h2'>) {
   return (
     <h2
-      className={clsx('text-2xl md:text-3xl py-4 text-balance dark:text-white', adamina.className, className)}
+      className={clsx('text-2xl md:text-4xl py-4 text-balance dark:text-white', adamina.className, className)}
       {...props}
     />
   )
