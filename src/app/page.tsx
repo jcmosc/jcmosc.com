@@ -1,7 +1,6 @@
 import { getAllPosts } from '@/cms'
 import { PostList } from '@/components/post-list'
 import { Container, Section, SectionHeader } from '@/components/ui/section'
-import { Time } from '@/components/ui/time'
 import { Heading, Subheading } from '@/components/ui/type'
 import { ArrowRightIcon } from '@heroicons/react/16/solid'
 import Link from 'next/link'
