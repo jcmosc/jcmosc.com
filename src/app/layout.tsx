@@ -1,5 +1,6 @@
 import { ScreenIndicator } from '@/components/screen-indicator'
 import { Scroll } from '@/components/ui/scroll'
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from './footer'
@@ -31,6 +32,7 @@ export default function RootLayout({
           </div>
         </Scroll>
         <ScreenIndicator />
+        <Analytics />
       </body>
     </html>
   )
