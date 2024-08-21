@@ -7,10 +7,7 @@ const adamina = Adamina({ weight: '400', subsets: ['latin'] })
 
 export function Heading({ className, ...props }: ComponentProps<'h1'>) {
   return (
-    <h1
-      className={clsx('text-3xl/snug md:text-5xl/snug py-4  text-balance', adamina.className, className)}
-      {...props}
-    />
+    <h1 className={clsx('text-3xl/snug md:text-5xl/snug py-4 text-balance', adamina.className, className)} {...props} />
   )
 }
 
