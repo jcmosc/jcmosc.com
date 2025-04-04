@@ -18,23 +18,23 @@ export function SequenceCard() {
     <div className="relative group overflow-clip w-full h-full ">
       <div className="absolute w-full grid grid-cols-3 gap-1 transform-3d translate-x-1/5 -translate-y-1/10 rotate-x-[34deg] rotate-y-[9deg] -rotate-z-[26deg]">
         <div className="flex flex-col gap-1 translate-y-1/10 transition-transform group-hover:translate-y-0 ">
-          <div className="w-full aspect-[3/5]">
+          <div className="w-full aspect-[3/5] rounded-lg overflow-hidden">
             <Image {...imageProps[0]} className="object-bottom" />
           </div>
-          <div className="w-full aspect-[3/5]">
+          <div className="w-full aspect-[3/5] rounded-lg overflow-hidden">
             <Image {...imageProps[1]} className="object-bottom" />
           </div>
         </div>
         <div className="flex flex-col gap-1 -translate-y-1/10 transition-transform group-hover:-translate-y-1/20">
-          <div className="w-full aspect-[3/5]">
+          <div className="w-full aspect-[3/5] rounded-lg overflow-hidden">
             <Image {...imageProps[2]} className="object-bottom" />
           </div>
-          <div className="w-full aspect-[3/5]">
+          <div className="w-full aspect-[3/5] rounded-lg overflow-hidden">
             <Image {...imageProps[3]} className="object-bottom" />
           </div>
         </div>
         <div className="flex flex-col gap-1 translate-y-2/10 transition-transform group-hover:translate-y-1/10">
-          <div className="w-full aspect-[3/5]">
+          <div className="w-full aspect-[3/5] rounded-lg overflow-hidden">
             <Image {...imageProps[4]} className="object-bottom" />
           </div>
         </div>

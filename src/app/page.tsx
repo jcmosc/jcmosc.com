@@ -1,4 +1,5 @@
 import { getAllPosts } from '@/cms'
+import { CriteriaPlaygroundCard } from '@/components/criteria-playground-card'
 import { PageTitlePageContainer } from '@/components/page-title-visibility'
 import { PostList } from '@/components/post-list'
 import { SequenceCard } from '@/components/sequence-card'
@@ -49,6 +50,14 @@ export default async function Home() {
                   <SequenceCard />
                 </CarouselItemContent>
                 <CarouselItemHeadline className="gradient from-stone-800 to-stone-800/0">Sequence</CarouselItemHeadline>
+              </CarouselItem>
+              <CarouselItem href="https://criteria.sh/play" className="bg-indigo-500 shadow-indigo-500/10">
+                <CarouselItemContent>
+                  <CriteriaPlaygroundCard />
+                </CarouselItemContent>
+                <CarouselItemHeadline className="gradient from-indigo-500 to-indigo-500/0">
+                  Criteria Playground
+                </CarouselItemHeadline>
               </CarouselItem>
             </CarouselItems>
           </Carousel>
