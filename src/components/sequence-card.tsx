@@ -39,10 +39,6 @@ export function SequenceCard() {
           </div>
         </div>
       </div>
-      {/* <div className="absolute w-1/2 aspect-[3/5] right-3 top-3 bg-yellow-500 -translate-x-12 -rotate-12"></div>
-      <div className="absolute w-1/2 aspect-[3/5] right-3 top-3 bg-blue-500 -translate-x-6 -rotate-6"></div>
-      <div className="absolute w-1/2 aspect-[3/5] right-3 top-3"></div> */}
-      {/* <Image src={completeImage} alt="Sequence game: Complete screen" /> */}
     </div>
   )
 }

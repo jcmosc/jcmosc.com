@@ -44,11 +44,11 @@ export default async function Home() {
               </div>
             </SectionHeader>
             <CarouselItems>
-              <CarouselItem href="http://playsequence.xyz">
+              <CarouselItem href="https://playsequence.xyz" className="bg-stone-800 shadow-stone-800/10">
                 <CarouselItemContent>
                   <SequenceCard />
                 </CarouselItemContent>
-                <CarouselItemHeadline>Sequence</CarouselItemHeadline>
+                <CarouselItemHeadline className="gradient from-stone-800 to-stone-800/0">Sequence</CarouselItemHeadline>
               </CarouselItem>
             </CarouselItems>
           </Carousel>

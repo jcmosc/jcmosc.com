@@ -71,7 +71,7 @@ export function CarouselItem({ href, className, ...props }: ComponentProps<'a'>)
     <a
       href={href ?? '#'}
       className={clsx(
-        'relative bg-stone-800 p-3 w-(--carousel-item-width) aspect-4/3 overflow-hidden rounded-lg hover:scale-[105%] shadow-stone-950/10 hover:shadow-xl transition-all',
+        'relative p-3 w-(--carousel-item-width) aspect-4/3 overflow-hidden rounded-lg hover:scale-[105%] hover:shadow-xl transition-all',
         className
       )}
       {...props}
@@ -82,10 +82,7 @@ export function CarouselItem({ href, className, ...props }: ComponentProps<'a'>)
 export function CarouselItemHeadline({ className, children, ...props }: ComponentProps<'div'>) {
   return (
     <div
-      className={clsx(
-        'absolute bottom-0 left-0 right-0 px-3 pb-3 pt-12 bg-linear-to-t gradient from-stone-800 to-stone-800/0 text-white',
-        className
-      )}
+      className={clsx('absolute bottom-0 left-0 right-0 px-3 pb-3 pt-12 bg-linear-to-t  text-white', className)}
       {...props}
     >
       <span className="text-xl">{children}</span>
