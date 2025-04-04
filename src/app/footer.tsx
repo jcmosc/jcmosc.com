@@ -4,13 +4,11 @@ import { ColorSchemeToggle } from '@/components/color-scheme'
 import { Container } from '@/components/ui/section'
 import { TextLink } from '@/components/ui/type'
 import clsx from 'clsx'
-import { useTheme } from 'next-themes'
 import { ComponentProps } from 'react'
 
 const copyrightYear = new Date().getFullYear()
 
 export default function Footer({ className, ...props }: ComponentProps<'footer'>) {
-  const { setTheme } = useTheme()
   return (
     <footer className={clsx('py-16', className)} {...props}>
       <Container className="text-sm flex gap-8 justify-between items-center">
@@ -28,7 +26,6 @@ export default function Footer({ className, ...props }: ComponentProps<'footer'>
             </li>
           </ul>
         </div>
-        <ColorSchemeToggle />
       </Container>
     </footer>
   )

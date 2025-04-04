@@ -10,5 +10,17 @@ export function SectionHeader({ className, ...props }: ComponentProps<'header'>)
 }
 
 export function Container({ className, ...props }: ComponentProps<'div'>) {
-  return <div className={clsx('sm:mx-8 md:mx-16 px-4', className)} {...props} />
+  return (
+    <div
+      className={clsx(
+        'md:[--container-margin:--spacing(16)] sm:[--container-margin:--spacing(8)] [--container-margin:0px] ',
+        '[--container-padding:--spacing(4)]',
+        'lg:[--container-width:calc(var(--breakpoint-lg)-2*var(--container-margin))] [--container-width:calc(100vw-2*var(--container-margin))]',
+        'mx-(--container-margin) px-(--container-padding)',
+        'lg:max-w-(--container-width)',
+        className
+      )}
+      {...props}
+    />
+  )
 }

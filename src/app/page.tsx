@@ -1,5 +1,16 @@
 import { getAllPosts } from '@/cms'
+import { PageTitlePageContainer } from '@/components/page-title-visibility'
 import { PostList } from '@/components/post-list'
+import { SequenceCard } from '@/components/sequence-card'
+import {
+  Carousel,
+  CarouselItem,
+  CarouselItemContent,
+  CarouselItemHeadline,
+  CarouselItems,
+  CarouselNextButton,
+  CarouselPreviousButton
+} from '@/components/ui/carousel'
 import { Container, Section, SectionHeader } from '@/components/ui/section'
 import { Heading, Subheading, TextLink } from '@/components/ui/type'
 import { ArrowRightIcon } from '@heroicons/react/16/solid'
@@ -9,15 +20,38 @@ export default async function Home() {
   return (
     <main>
       <Section>
+        <PageTitlePageContainer>
+          <Container>
+            <SectionHeader className="py-8">
+              <Heading>
+                Hey, I&apos;m <strong>James Moschou</strong>, a digital product generalist.
+              </Heading>
+            </SectionHeader>
+            <div className="text-lg md:text-xl leading-relaxed">
+              <p>I&apos;m currently building full-stack applications in the Next.js ecosystem.</p>
+            </div>
+          </Container>
+        </PageTitlePageContainer>
+      </Section>
+      <Section>
         <Container>
-          <SectionHeader className="py-8">
-            <Heading>
-              Hey, I&apos;m <strong>James Moschou</strong>, a digital product generalist.
-            </Heading>
-          </SectionHeader>
-          <div className="text-lg md:text-xl leading-relaxed">
-            <p>I&apos;m currently building full-stack applications in the Next.js ecosystem.</p>
-          </div>
+          <Carousel>
+            <SectionHeader className="flex justify-between items-center">
+              <Subheading>Projects</Subheading>
+              <div className="flex gap-x-3">
+                <CarouselPreviousButton />
+                <CarouselNextButton />
+              </div>
+            </SectionHeader>
+            <CarouselItems>
+              <CarouselItem href="http://playsequence.xyz">
+                <CarouselItemContent>
+                  <SequenceCard />
+                </CarouselItemContent>
+                <CarouselItemHeadline>Sequence</CarouselItemHeadline>
+              </CarouselItem>
+            </CarouselItems>
+          </Carousel>
         </Container>
       </Section>
       <Section>

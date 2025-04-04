@@ -1,18 +1,32 @@
 'use client'
 
+import { ColorSchemeToggle } from '@/components/color-scheme'
+import { PageTitleHeaderContainer } from '@/components/page-title-visibility'
 import { Container } from '@/components/ui/section'
 import { ArrowLeftIcon } from '@heroicons/react/16/solid'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useSelectedLayoutSegments } from 'next/navigation'
-import { ComponentProps } from 'react'
+import { ComponentProps, RefObject } from 'react'
+
+const links = [
+  { href: '/', title: 'Home' },
+  { href: '/blog', title: 'Blog' }
+]
 
 export default function Header({ className, ...props }: ComponentProps<'header'>) {
   const segments = useSelectedLayoutSegments()
+  const isHome = segments && segments.length === 0
   const isPost = segments && segments.length === 2 && segments[0] === 'blog'
+
   return (
-    <header className={clsx('py-4 md:py-8', className)} {...props}>
+    <header className={clsx('py-2 md:py-4 backdrop-blur-xs bg-white/80 dark:bg-stone-950/80', className)} {...props}>
       <Container className="flex justify-between items-center text-base md:text-lg text-stone-700 dark:text-stone-400">
+        {isHome && (
+          <PageTitleHeaderContainer>
+            <span className="font-semibold">James Moschou</span>
+          </PageTitleHeaderContainer>
+        )}
         {isPost && (
           <Link
             href="/blog"
@@ -23,20 +37,20 @@ export default function Header({ className, ...props }: ComponentProps<'header'>
           </Link>
         )}
         {!isPost && <div />}
-        <nav>
-          <ul className="flex gap-8">
-            <li>
-              <Link href="/" className="hover:text-stone-950 hover:underline dark:hover:text-white">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" className="hover:text-stone-950 hover:underline dark:hover:text-white">
-                Blog
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="flex items-center gap-8">
+          <nav>
+            <ul className="flex items-center gap-8">
+              {links.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-stone-950 hover:underline dark:hover:text-white">
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <ColorSchemeToggle />
+        </div>
       </Container>
     </header>
   )

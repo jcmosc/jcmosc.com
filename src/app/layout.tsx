@@ -7,6 +7,7 @@ import { Inter } from 'next/font/google'
 import Footer from './footer'
 import './globals.css'
 import Header from './header'
+import { PageTitleVisibility } from '@/components/page-title-visibility'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,13 +27,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`h-screen dark:bg-stone-950 dark:text-stone-400 ${inter.className}`}>
         <ColorSchemeProvider>
-          <Scroll>
-            <div className="min-h-screen flex flex-col">
-              <Header />
-              {children}
-              <Footer className="mt-auto" />
-            </div>
-          </Scroll>
+          <PageTitleVisibility>
+            <Scroll>
+              <div className="min-h-screen flex flex-col relative">
+                <Header className="fixed top-0 left-0 right-0 z-10" />
+                {children}
+                <Footer className="mt-auto" />
+              </div>
+            </Scroll>
+          </PageTitleVisibility>
           <ScreenIndicator />
           <Analytics />
         </ColorSchemeProvider>
